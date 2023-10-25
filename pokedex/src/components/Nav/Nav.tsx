@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Nav.module.css';
 import * as data from './links.json';
+import logo from '../../assets/logoPokemon.png';
 
 const linksString = JSON.stringify(data);
 const links = JSON.parse(linksString).links;
@@ -31,7 +32,7 @@ const Nav: React.FC<{}> = () => {
     return (
         <nav className={styles.navbar}>
             <div className={styles['logo-container']}>
-                <span>Logo</span>
+                <img src = { logo } />
             </div>
             <Links links={links} />
         </nav>

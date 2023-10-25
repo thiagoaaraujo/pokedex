@@ -1,0 +1,18 @@
+.title {
+    margin-left: 80px;
+}
+
+.input {
+    margin-left: 80px;
+    border-radius: 1px;
+    height: 20px;
+}
+
+.button {
+    height: 26px;
+    margin-left: 10px;
+    color: #355fa0;
+    font-weight: bold;
+    background-color: #e9bd31;
+    border-radius: 1px;
+}
