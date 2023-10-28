@@ -7,11 +7,14 @@
 .container-image img {
     height: 360px;
     width: 360px;
-    margin-top: 80px;
+    margin-top: 40px;
     margin-left: 260px;
     border-style: groove;
     border-radius: 10px;
-    filter: brightness(0%);/* Filtro para colocar a sombra da img */
+}
+
+.image-brightness {
+    filter: brightness(0%);
 }
 
 .container-image h1 {
