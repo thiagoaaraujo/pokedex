@@ -2,15 +2,11 @@
     "links": [
         {
             "label": "Home",
-            "href": "/home"
+            "href": "/"
         },
         {
-            "label": "About",
-            "href": "/about"
-        },
-        {
-            "label": "Contact",
-            "href": "/contact"
+            "label": "Pokémons",
+            "href": "/pokemon-list"
         }
     ]
 }

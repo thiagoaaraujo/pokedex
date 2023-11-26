@@ -23,17 +23,16 @@
     display: flex;
     width: 300px;
     justify-content: space-evenly;
-
 }
 
 .link a {
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    color: #355fa0;
+    color: aliceblue;
 }
 
 .link a:hover {
     text-decoration: none;
-    color: rgb(98, 30, 30);
+    color: #e9bd31;
 }
