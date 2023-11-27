@@ -1,15 +1,15 @@
 {
     "links": [
         {
-            "label": "Home",
+            "label": "Quem é esse pokemon?",
             "href": "/"
         },
         {
-            "label": "Pokémons",
+            "label": "Pokedex",
             "href": "/pokemon-list"
         },
         {
-            "label": "Cadastro",
+            "label": "Cadastrar Pokemon",
             "href": "/form"
         }
     ]

@@ -21,18 +21,26 @@
 .links-container {
     margin-right: 80px;
     display: flex;
-    width: 300px;
+    width: 50%;
     justify-content: space-evenly;
 }
 
 .link a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: bold;
-    color: aliceblue;
+    color: black;
+    
+    padding: 5px; /* Adiciona algum espaçamento interno para tornar a borda visível */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    
 }
 
 .link a:hover {
     text-decoration: none;
     color: #e9bd31;
+    border: 2px solid #e9bd31; /* Uma borda sólida de 1 pixel preta */
+    padding: 5px; /* Adiciona algum espaçamento interno para tornar a borda visível */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    background-color: #f51a1e;
 }
