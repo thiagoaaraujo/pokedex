@@ -1,5 +1,6 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import { FaMars, FaVenus } from 'react-icons/fa';
+import { createPokemon } from '../../services/services';
 import styles from './FormPage.module.css';
 
 interface FormularioState {
@@ -7,6 +8,7 @@ interface FormularioState {
   genero: string; // Alterado para string, pois o valor será "Macho" ou "Fêmea"
   tipo: string;
   imagem: File | null;
+  imagemBase64: string | null;
 }
 
 const Formulario: React.FC = () => {
@@ -15,6 +17,7 @@ const Formulario: React.FC = () => {
     genero: '', // Inicializado como uma string vazia
     tipo: '',
     imagem: null,
+    imagemBase64: null
   });
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -26,20 +29,34 @@ const Formulario: React.FC = () => {
   };
 
   const handleImagemChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const imagem = e.target.files?.[0] || null;
-    setFormulario((prevFormulario) => ({
-      ...prevFormulario,
-      imagem,
-    }));
+    const imagemFile = e.target.files?.[0];
+    if (imagemFile) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const imagemBase64 = reader.result as string;
+        const convertString = imagemBase64.replace('data:image/png;base64,', '')
+        setFormulario((prevFormulario) => ({
+          ...prevFormulario,
+          imagem: imagemFile,
+          imagemBase64: convertString
+        }));
+      };
+      reader.readAsDataURL(imagemFile);
+    }
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     // Aqui você pode implementar a lógica de envio do formulário, por exemplo, fazer uma requisição HTTP para um servidor.
+try{
+  await createPokemon(formulario.nome, formulario.tipo, formulario.genero, formulario.imagemBase64).then(() => console.log('Sucesso'))
+}catch(err){
+console.log(err)
+}
 
-    // Exemplo de como exibir os dados no console:
-    console.log(formulario);
   };
+
+
 
   return (
     <div className={styles['form-container']}>
