@@ -7,26 +7,23 @@
     border-width: 10px;
     border-radius: 10px;
     margin-top: 80px;
-    margin-left: auto;
+    margin-left: 150px;
     margin-right: auto;
-    width: 50%;
+    width: 35%;
+    flex-direction: row;
 }
 
 .container-image {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
     margin-top: 40px;
 }
 
-.image-container {
-    margin-right: 20px;
-}
-
 .container-image img {
+    margin-right: 20px;
     padding-bottom: 25px;
-    height: 360px;
-    width: 360px;
+    height: 260px;
+    width: 260px;
 }
 
 .text-container {
