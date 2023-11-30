@@ -49,7 +49,7 @@ const Formulario: React.FC = () => {
     e.preventDefault();
     // Aqui você pode implementar a lógica de envio do formulário, por exemplo, fazer uma requisição HTTP para um servidor.
 try{
-  await createPokemon(formulario.nome, formulario.tipo, formulario.genero, formulario.imagemBase64).then(() => console.log('Sucesso'))
+  await createPokemon(formulario.nome, formulario.tipo, formulario.genero, formulario.imagemBase64, formulario.imagemBase64).then(() => console.log('Sucesso'))
 }catch(err){
 console.log(err)
 }

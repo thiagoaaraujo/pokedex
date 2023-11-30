@@ -11,9 +11,9 @@ const getPokemons = async () => {
     return response.data
 }
 
-const createPokemon = async (name, type, gender, sprite) => {
+const createPokemon = async (name, type, gender, sprite, spriteBase64) => {
 
-    const body = { name, type, gender, sprite }
+    const body = { name, type, gender, sprite, spriteBase64 }
 
     const response = await api.post('/pokemon', body, {
         headers: {

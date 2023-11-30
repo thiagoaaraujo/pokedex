@@ -30,7 +30,6 @@ export default function InputPage() {
     return (
         <>
             <div className={styles['container']}>
-            
                 <div className={styles['container-image']} style={{filter: `brightness(${resp ? '100' : '0'}%)`}}>
                     <h1>{resp ? `É o ${pokemon?.name[0].toUpperCase() + pokemon?.name.substring(1)}` : ''}</h1>
                     <img src={pokemon?.sprite} className={styles['image']} alt='Pokemon'/>
